@@ -1,3 +1,5 @@
+import data from './data';
+
 function App() {
   return (
     <div class="container">
@@ -8,12 +10,13 @@ function App() {
           </a>
         </div>
         <div class="top_nav">
-          <a href="#">
+          <a href="/cart">
             <strong>Cart</strong>
           </a>
-          <a href="#">
+          <a href="/signin">
             <strong>Sign In</strong>
           </a>
+          .
         </div>
       </header>
 
@@ -28,430 +31,28 @@ function App() {
               </h1>
             </div>
             <div class="section-content">
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p1.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
+              {data.products.map((product) => (
+                <div class="card" key={product._id}>
+                  <a href={`/product/${product._id}`}>
+                    <img
+                      class="medium"
+                      src={product.image}
+                      alt={product.name}
+                    />
                   </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <br />
-                    <span>Rating</span>
+                  <div class="card-body">
+                    <a href={`/product/${product._id}`}>
+                      <h3>{product.name}</h3>
+                    </a>
+                    <div>
+                      <span>{product.price} Fbu</span>
+                      <br />
+                      <span>{product.rating}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p2.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p3.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p4.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p5.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p6.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p7.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p8.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p9.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p10.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p11.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p12.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p13.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p14.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p15.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p16.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p17.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p18.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p19.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p20.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p21.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p22.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p23.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p24.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p25.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p26.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p27.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p28.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p29.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <a href="#">
-                  <img class="medium" src="./Images/p30.jpg" alt="service" />
-                </a>
-                <div class="card-body">
-                  <a href="#">
-                    <h3>Short and Shirt (3years)</h3>
-                  </a>
-                  <div>
-                    <span>Price: 200 Fbu</span>
-                    <span>Rating</span>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
-
             <div class="section-explore">
               <h1>
                 <a class="" href="#">
