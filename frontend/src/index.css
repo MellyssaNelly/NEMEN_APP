@@ -1,0 +1,207 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+html {
+  font-size: 70%; /*16px * 62.5 = 10px = 1rem */
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh; /*full height*/
+  font-family: 'Times New Roman', Times, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+}
+
+/*  Layout  */
+.container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr 5rem;
+  height: 100%;
+}
+
+.header {
+  grid-area: header;
+  background-color: #fff;
+  border-bottom: solid #0097a7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem;
+  height: 100%;
+}
+
+.logo img {
+  width: 25rem;
+}
+
+.logo:hover {
+  background-color: #ddd;
+}
+
+.header .top_nav {
+  font-size: 4rem;
+}
+
+.header .top_nav a {
+  padding: 0.5rem 0.5rem;
+  color: #0097a7;
+  text-decoration: none;
+  border: solid #0097a7;
+  margin: 0.5rem;
+}
+
+.header .top_nav a:hover {
+  background-color: #ddd;
+}
+
+.main {
+  grid-area: main;
+  background-color: #fff;
+}
+.content {
+  margin-top: 2rem;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  border-bottom: #ddd solid;
+  font-size: 1.5rem;
+}
+
+.section-title {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  background-color: #0097a7;
+  border: 0.1rem #0097a7;
+  border-style: double;
+  border-radius: 0.5rem;
+  height: 6rem;
+  /*background-image:url('./Images/IT\ Strategy.png');*/
+}
+
+.section-title a {
+  float: left;
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 0rem 1rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+.section-title a:hover {
+  background-color: #fff;
+  color: #0097a7;
+}
+
+.section-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Image*/
+
+.section-content img.medium {
+  width: 23rem;
+}
+
+/* Card*/
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 38rem;
+  width: 23rem;
+  margin: 0.7rem;
+  background: #b5cfd2;
+  border: solid #000 0.1rem;
+}
+.card-body {
+  padding-left: 1rem;
+  padding-right: 0.7rem;
+  font-size: 1.5rem;
+}
+.card-body div {
+  display: flex;
+  flex-direction: column;
+}
+.card-body a {
+  font-size: 1.8rem;
+}
+
+.short-caption {
+  color: #000;
+}
+/*rating*/
+.rating {
+  padding-top: 0.5rem;
+}
+
+.rating span {
+  color: darkorange;
+  margin: 0.5rem;
+}
+/*coloring in black the number of reviews*/
+.rating span:last-child {
+  color: #000;
+}
+
+.section-explore {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  background-color: #0097a7;
+  border: 0.1rem #0097a7;
+  border-style: double;
+  border-radius: 0.5rem;
+  height: 4rem;
+  margin-bottom: 2rem;
+}
+
+.section-explore a {
+  float: left;
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 0rem 1rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+.section-explore a:hover {
+  background-color: #fff;
+  color: #0097a7;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #0097a7;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* On smaller screens, decrease font-size */
+@media only screen and (max-width: 680px) {
+  html {
+    font-size: 48%;
+  }
+}
