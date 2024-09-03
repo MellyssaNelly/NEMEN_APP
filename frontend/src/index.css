@@ -137,17 +137,11 @@ body {
   padding-right: 0.7rem;
   font-size: 1.5rem;
 }
-.card-body div {
-  display: flex;
-  flex-direction: column;
-}
+
 .card-body a {
   font-size: 1.8rem;
 }
 
-.short-caption {
-  color: #000;
-}
 /*rating*/
 .rating {
   padding-top: 0.5rem;
@@ -160,6 +154,66 @@ body {
 /*coloring in black the number of reviews*/
 .rating span:last-child {
   color: #000;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 1.7rem;
+}
+
+.btn a {
+  color: #fff;
+  display: flex;
+  padding: 0.7rem;
+  margin: 0.3rem;
+  text-decoration: none;
+  background-color: #0097a7;
+  border: 0.1rem #0097a7 solid;
+  height: 3rem;
+  border-radius: 0.5rem;
+}
+
+.btn a:hover {
+  background-color: #fff;
+  color: #0097a7;
+}
+
+.reg-button button {
+  background-color: #0097a7;
+  color: #fff;
+  padding: 1rem;
+  font-size: 1.7rem;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 1rem;
+}
+button:hover {
+  background-color: #fff;
+  color: #0097a7;
+}
+
+.single-content {
+  font-size: 1.5rem;
+}
+.single-content li {
+  list-style-type: none;
+  padding: 0rem;
+  flex: 0 1 34rem;
+  margin: 1rem;
+  height: 100%;
+  border-bottom: 0.1rem black solid;
+}
+
+.single-content .large-img {
+  margin: 0.7rem;
+  max-width: 44rem;
+}
+
+.single-content .top-row {
+  display: flex;
+  justify-content: center;
 }
 
 .section-explore {
